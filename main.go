@@ -4,7 +4,14 @@ package main
 // buzz if the number is evenly divisible by 5
 // fizzbuzz if the number is evenly divisible by both
 func fizzBuzz(i int) string {
-	return "fizz"
+	s := ""
+	if i%3 == 0 {
+		s = s + "fizz"
+	}
+	if i%5 == 0 {
+		s = s + "buzz"
+	}
+	return s
 }
 
 func main() {
