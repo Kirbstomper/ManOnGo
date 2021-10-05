@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"time"
 )
 
 // Returns fizz if the number is evenly divisible by 3
@@ -22,10 +23,18 @@ func fizzBuzz(i int64) string {
 	return s
 }
 
+// Puts executing goroutine to sleep for 5 seconds to simulate work
+// then logs that a message was received
+func logMessage() {
+	time.Sleep(5 * time.Second)
+	log.Println("Message received!")
+}
+
 //Starts up a server to receive request and returns
 //result of fizzBuzz
 func main() {
 	http.HandleFunc("/fizzbuzz", func(rw http.ResponseWriter, r *http.Request) {
+		logMessage()
 		body, err := ioutil.ReadAll(r.Body)
 		if err != nil {
 			rw.WriteHeader(http.StatusBadRequest)
