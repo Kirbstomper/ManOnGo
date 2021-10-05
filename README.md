@@ -6,9 +6,12 @@ This repository contains the code used in my "Man On the Go" Tech On Tap present
 
 You can build the application using
 `go build`
+
 You can then run it
 `./ManOnGo`
+
 You can send requests to localhost:8080/fizzbuzz
+
 request body is just text containing the number you wish to fizzbuzz
 
 # Running Tests
