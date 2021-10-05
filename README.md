@@ -8,7 +8,10 @@ You can build the application using
 `go build`
 You can then run it
 `./ManOnGo`
+You can send requests to localhost:8080/fizzbuzz
+request body is just text containing the number you wish to fizzbuzz
 
 # Running Tests
-You can run test using 
+
+You can run tests using 
 `go test`
