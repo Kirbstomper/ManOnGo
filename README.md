@@ -10,3 +10,5 @@ You can then run it
 `./ManOnGo`
 
 # Running Tests
+You can run test using 
+`go test`
