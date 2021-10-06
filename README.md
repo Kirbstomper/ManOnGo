@@ -18,3 +18,9 @@ request body is just text containing the number you wish to fizzbuzz
 
 You can run tests using 
 `go test`
+
+# Viewing Documentation
+
+You can view documentation by using the `godoc` tool
+
+`godoc -http=:6060` will deploy the documentation at localhost:6060 to view

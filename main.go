@@ -1,4 +1,4 @@
-package main
+package manongo
 
 import (
 	"fmt"
@@ -8,20 +8,6 @@ import (
 	"strconv"
 	"time"
 )
-
-// Returns fizz if the number is evenly divisible by 3
-// buzz if the number is evenly divisible by 5
-// fizzbuzz if the number is evenly divisible by both
-func fizzBuzz(i int64) string {
-	s := ""
-	if i%3 == 0 {
-		s = s + "fizz"
-	}
-	if i%5 == 0 {
-		s = s + "buzz"
-	}
-	return s
-}
 
 // Puts executing goroutine to sleep for 5 seconds to simulate work
 // then logs that a message was received
@@ -48,7 +34,7 @@ func main() {
 			fmt.Fprint(rw, "Error parsing request, please send only an integer")
 			return
 		}
-		fmt.Fprint(rw, fizzBuzz(i))
+		fmt.Fprint(rw, FizzBuzz(i))
 	})
 	log.Println("Starting Server!")
 	log.Fatal(http.ListenAndServe(":8080", nil))
