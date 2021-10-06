@@ -2,7 +2,7 @@ package manongo
 
 import (
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"strconv"
@@ -21,7 +21,7 @@ func logMessage() {
 func main() {
 	http.HandleFunc("/fizzbuzz", func(rw http.ResponseWriter, r *http.Request) {
 		logMessage()
-		body, err := ioutil.ReadAll(r.Body)
+		body, err := io.ReadAll(r.Body)
 		if err != nil {
 			rw.WriteHeader(http.StatusBadRequest)
 			fmt.Fprint(rw, "Error reading request body")
