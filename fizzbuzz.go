@@ -1,6 +1,6 @@
 //Contains code used in demostration and implements a
 //Fizzbuzz solution in go
-package manongo
+package main
 
 // Returns fizz if the number is evenly divisible by 3
 //

@@ -1,4 +1,4 @@
-package manongo
+package main
 
 import "testing"
 
